@@ -134,14 +134,19 @@ button {
   line-height: 1;
 }
 .inner-container__button {
+  width: 21px;
   padding: 5px 0;
+  transition: transform 150ms;
+}
+.inner-container__button:hover, .inner-container__button:focus-visible {
+  transform: scale(1.2);
 }
 .inner-container__button:hover .inner-container__ellipsis-icon__path, .inner-container__button:focus-visible .inner-container__ellipsis-icon__path {
   fill: white;
 }
 .inner-container__ellipsis-icon {
   display: block;
-  height: 5px;
+  width: 100%;
 }
 .inner-container__info {
   display: flex;
