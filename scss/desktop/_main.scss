@@ -1,0 +1,83 @@
+@use "../util/functions" as f;
+
+@media screen and (min-width: 900px) {
+  main {
+    display: grid;
+    place-items: center;
+  }
+
+  .dashboard {
+    grid-template-columns: repeat(3, 255px);
+
+    &__container {
+      padding-top: 45px;
+    }
+  }
+
+  .inner-container {
+    padding: 30px 30px;
+
+    &__header {
+      margin-bottom: f.rem(32);
+    }
+
+    &__info {
+      display: block;
+    }
+
+    &__current-time {
+      font-size: f.rem(55);
+      margin: 0 0 f.rem(14) 0;
+    }
+
+    &__previous-time {
+      line-height: 1.3;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .dashboard {
+    grid-template-columns: repeat(4, 255px);
+
+    &__main {
+      grid-column: unset;
+      grid-row: 1 / 3;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .main {
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      height: 100%;
+      padding: 34px 28px;
+    }
+
+    &__avatar {
+      height: 84px;
+      margin: 0 0 38px 0;
+    }
+
+    &__heading {
+      margin-left: 4px;
+    }
+
+    &__name {
+      font-size: f.rem(38);
+      line-height: 1.3;
+      letter-spacing: f.rem(1);
+    }
+
+    &__nav {
+      display: block;
+      padding: 24px 32px 34px 32px;
+    }
+
+    &__timeframe:not(:last-child) {
+      margin-bottom: f.rem(20);
+    }
+  }
+}
