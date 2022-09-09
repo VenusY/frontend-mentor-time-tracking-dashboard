@@ -116,6 +116,7 @@ button {
   border-radius: 15px;
   width: 100%;
   padding: 30px 24px;
+  transition: background 150ms;
 }
 .inner-container:hover {
   background: #34397b;
