@@ -102,7 +102,6 @@ button {
   &__timeframe {
     display: block;
     font-size: f.rem(18);
-    font-weight: 400;
     color: var(--desaturated-blue);
 
     &:hover,
@@ -117,10 +116,15 @@ button {
 }
 
 .inner-container {
+  cursor: pointer;
   background: var(--dark-blue);
   border-radius: 15px;
   width: 100%;
   padding: 30px 24px;
+
+  &:hover {
+    background: #34397b;
+  }
 
   &__header {
     display: flex;
