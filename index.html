@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- displays site properly based on user's device -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Time tracking dashboard</title>
+  </head>
+  <body>
+    <main>
+      <div class="dashboard">
+        <div class="dashboard__main">
+          <div class="main__header">
+            <img
+              src="images/image-jeremy.png"
+              alt="Avatar"
+              class="main__avatar"
+            />
+            <h1 class="main__heading">
+              Report for <span class="main__name">Jeremy Robson</span>
+            </h1>
+          </div>
+
+          <div class="main__nav">
+            <button type="button" class="main__timeframe" id="daily">
+              Daily
+            </button>
+
+            <button
+              type="button"
+              class="main__timeframe main__timeframe--active"
+              id="weekly"
+            >
+              Weekly
+            </button>
+
+            <button type="button" class="main__timeframe" id="monthly">
+              Monthly
+            </button>
+          </div>
+        </div>
+        <!-- .dashboard__main -->
+
+        <div class="dashboard__container dashboard__work">
+          <div class="inner-container">
+            <div class="inner-container__header">
+              <h2 class="inner-container__heading">Work</h2>
+              <button class="inner-container__button">
+                <svg
+                  class="inner-container__ellipsis-icon"
+                  viewBox="0 0 21 5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="inner-container__ellipsis-icon__path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="inner-container__info">
+              <p class="inner-container__current-time" id="work__current-time">
+                32hrs
+              </p>
+              <p
+                class="inner-container__previous-time"
+                id="work__previous-time"
+              >
+                Last Week - 36hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- .dashboard__work -->
+
+        <div class="dashboard__container dashboard__play">
+          <div class="inner-container">
+            <div class="inner-container__header">
+              <h2 class="inner-container__heading">Play</h2>
+              <button class="inner-container__button">
+                <svg
+                  class="inner-container__ellipsis-icon"
+                  viewBox="0 0 21 5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="inner-container__ellipsis-icon__path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="inner-container__info">
+              <p class="inner-container__current-time" id="play__current-time">
+                10hrs
+              </p>
+              <p
+                class="inner-container__previous-time"
+                id="play__previous-time"
+              >
+                Last Week - 8hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- .dashboard__play -->
+
+        <div class="dashboard__container dashboard__study">
+          <div class="inner-container">
+            <div class="inner-container__header">
+              <h2 class="inner-container__heading">Study</h2>
+              <button class="inner-container__button">
+                <svg
+                  class="inner-container__ellipsis-icon"
+                  viewBox="0 0 21 5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="inner-container__ellipsis-icon__path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="inner-container__info">
+              <p class="inner-container__current-time" id="study__current-time">
+                4hrs
+              </p>
+              <p
+                class="inner-container__previous-time"
+                id="study__previous-time"
+              >
+                Last Week - 7hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- .dashboard__study -->
+
+        <div class="dashboard__container dashboard__exercise">
+          <div class="inner-container">
+            <div class="inner-container__header">
+              <h2 class="inner-container__heading">Exercise</h2>
+              <button class="inner-container__button">
+                <svg
+                  class="inner-container__ellipsis-icon"
+                  viewBox="0 0 21 5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="inner-container__ellipsis-icon__path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="inner-container__info">
+              <p
+                class="inner-container__current-time"
+                id="exercise__current-time"
+              >
+                4hrs
+              </p>
+              <p
+                class="inner-container__previous-time"
+                id="exercise__previous-time"
+              >
+                Last Week - 5hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- .dashboard__exercise -->
+
+        <div class="dashboard__container dashboard__social">
+          <div class="inner-container">
+            <div class="inner-container__header">
+              <h2 class="inner-container__heading">Social</h2>
+              <button class="inner-container__button">
+                <svg
+                  class="inner-container__ellipsis-icon"
+                  viewBox="0 0 21 5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="inner-container__ellipsis-icon__path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="inner-container__info">
+              <p
+                class="inner-container__current-time"
+                id="social__current-time"
+              >
+                5hrs
+              </p>
+              <p
+                class="inner-container__previous-time"
+                id="social__previous-time"
+              >
+                Last Week - 10hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- .dashboard__social -->
+
+        <div class="dashboard__container dashboard__self-care">
+          <div class="inner-container">
+            <div class="inner-container__header">
+              <h2 class="inner-container__heading">Self Care</h2>
+              <button class="inner-container__button">
+                <svg
+                  class="inner-container__ellipsis-icon"
+                  viewBox="0 0 21 5"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="inner-container__ellipsis-icon__path"
+                    d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                    fill="#BBC0FF"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="inner-container__info">
+              <p
+                class="inner-container__current-time"
+                id="self-care__current-time"
+              >
+                2hrs
+              </p>
+              <p
+                class="inner-container__previous-time"
+                id="self-care__previous-time"
+              >
+                Last Week - 2hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- .dashboard__self-care -->
+      </div>
+      <!-- .dashboard -->
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
